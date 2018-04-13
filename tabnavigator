@@ -1,0 +1,61 @@
+/**
+ * Sample React Native App - TabNavigator
+ * https://github.com/facebook/react-native
+ * @flow
+ * Raul
+ */
+ import React from 'react';
+ import { Text,View } from 'react-native';
+ import { TabNavigator } from 'react-navigation';
+ import Home from './src/screens/Home';
+ import Pantry from './src/screen/Pantry';
+ im
+
+ class HomeScreen extends React.Component {
+  render()  {
+    return( 
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Início</Text>
+      </View> 
+    );
+  }
+}
+
+  class PantryScreen extends React.Component {
+  render() {
+    return (
+      <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Armário</Text>
+      </View>
+    );
+  }
+} 
+
+  class RecipeScreen extends React.Component {
+    render() {
+      return (
+        <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text>Receitas</Text>
+        </View>
+      )
+    }
+  }
+
+  class SettingScreen extends React.Component {
+    render() {
+      return (
+        <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text>Configurações</Text>
+        </View>
+      );
+    }
+  }
+
+export default TabNavigator ({
+  Inicio: { screen: HomeScreen },
+  Armario: { screen: PantryScreen },
+  Receitas: { screen: RecipeScreen }, 
+  Configuraçoes: { screen: SettingScreen}
+});
+
+
